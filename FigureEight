@@ -1,0 +1,18 @@
+/**
+ * Makes the sphero bolt go in an angular figure 8 pattern over 9.35 seconds at a speed of 80
+*/
+async function figureEight() {
+	await roll(45, 80, 1);  // moves at 45 degrees at 100 speed for 1 second
+	await delay(1)
+	await roll(270, 80, 2); // moves at 279 degrees at 100 speed for 1.5 seconds
+	await delay(1)
+	await roll(135, 80, 2.7); // moves at 135 degrees at 100 speed for 2 seconds
+	await delay(1)
+	await roll(270, 80, 1.85); // moves at 270 degrees at 100 speed for 1.5 seconds
+	await delay(1)
+	await roll(55, 80, 1.8) // moves 45 degrees at 100 speed for 1.5 seconds
+}
+
+async function startProgram() {
+	await figureEight();
+}
