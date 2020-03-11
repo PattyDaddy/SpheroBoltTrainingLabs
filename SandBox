@@ -1,20 +1,22 @@
-
-
+/*
+Programmer: Allison, Patricio
+Date: 3.11.20
+Program: We created a program that invlolved direction of change, color change, and degree munipulation to create a figure eight.
+*/
 
 
 /**
- * Makes the sphero bolt go in an angular figure 8 pattern over 9.35 seconds at a speed of 80
+ * Makes the sphero bolt go in an angular figure 8 pattern over 8 seconds at a speed of 80
 */
 async function figureEight() {
-	await roll(45, 80, 1);  // moves at 45 degrees at 100 speed for 1 second
-	await delay(1)
-	await roll(270, 80, 2); // moves at 279 degrees at 100 speed for 1.5 seconds
-	await delay(1)
-	await roll(135, 80, 2.7); // moves at 135 degrees at 100 speed for 2 seconds
-	await delay(1)
-	await roll(270, 80, 1.85); // moves at 270 degrees at 100 speed for 1.5 seconds
-	await delay(1)
-	await roll(55, 80, 1.8) // moves 45 degrees at 100 speed for 1.5 seconds
+	await roll(45, 80, 1);  // moves at 45 degrees at 80 speed for 1 second
+	await roll(305, 80, 1); // moves at 305 degrees at 80 speed for 1 second
+	await roll(225, 80, 1); // moves at 225 degrees at 80 speed for 1 second
+	await roll(135, 80, 1); // moves at 135 degrees at 80 speed for 1 second
+	await roll(135, 80, 1); // moves at 135 degrees at 80 speed for 1 second
+	await roll(225, 80, 1); // moves at 225 degrees at 80 speed for 1 second
+	await roll(305, 80, 1); // moves at 305 degrees at 80 speed for 1 second
+	await roll(45, 80, 1) // moves 45 degrees at 80 speed for 1 second
 }
 
 
@@ -25,7 +27,7 @@ async function startProgram() {
 	await delay(1); // delays execution of the next set of code for "2.5" seconds
 	await roll(90, 150, 1)
 	drawMatrixLine ({ r: 0, g: 90, b: 0}, {x: 2, y: 0}, {x: 2, y:7});  //Drawing a line on the main LED
-	await figureEight();
+	await figureEight(); // calls figureEight Function
 }
 
   
