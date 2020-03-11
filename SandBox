@@ -27,6 +27,7 @@ async function startProgram() {
 	await delay(1); // delays execution of the next set of code for "2.5" seconds
 	await roll(90, 150, 1)
 	drawMatrixLine ({ r: 0, g: 90, b: 0}, {x: 2, y: 0}, {x: 2, y:7});  //Drawing a line on the main LED
+	setHeading(0)
 	await figureEight(); // calls figureEight Function
 }
 
