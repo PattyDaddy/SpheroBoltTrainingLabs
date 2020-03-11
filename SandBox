@@ -21,14 +21,15 @@ async function figureEight() {
 
 
 async function startProgram() {
-	await roll(0, 100, 1); // "0" is the angle the SB moves; "150" is the speed the SB moves at; "1" is how many seconds the SB moves for
+	await roll(0, 100, 1); // "0" is the angle the SB moves; "100" is the speed the SB moves at; "1" is how many seconds the SB moves for
 	setMainLed({ r: 45, g: 0, b: 45 }); // Main LED color changes to a purple
 	await speak("Turning Right", true);
-	await delay(1); // delays execution of the next set of code for "2.5" seconds
+	await delay(1); // delays execution of the next set of code for "1" seconds
 	await roll(90, 150, 1)
 	drawMatrixLine ({ r: 0, g: 90, b: 0}, {x: 2, y: 0}, {x: 2, y:7});  //Drawing a line on the main LED
 	setHeading(0)
 	await figureEight(); // calls figureEight Function
 }
 
+  
   
